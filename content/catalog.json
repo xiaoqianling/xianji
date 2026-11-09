@@ -1,0 +1,1456 @@
+{
+  "version": 1,
+  "stages": [
+    {
+      "id": "first-sound",
+      "label": "初见",
+      "title": "认识琴弦，弹出第一个音",
+      "description": "从坐姿、调弦和读谱开始，找到干净、放松的声音。",
+      "lessons": [
+        {
+          "id": "strings",
+          "title": "从六根弦开始",
+          "minutes": 8,
+          "concept": "认识琴头、琴颈、品丝和琴桥。六弦最粗，面向身体上侧。",
+          "practice": "按六弦到一弦的顺序拨空弦，记住 E2、A2、D3、G3、B3、E4。",
+          "listen": "用工具里的参考音逐根比对。音偏低时稍拧紧，再拨一次确认。",
+          "goal": "不看图，能叫出任意一根弦的弦号和音名。",
+          "bpm": 60,
+          "chords": []
+        },
+        {
+          "id": "fret",
+          "title": "让音符清楚地响起来",
+          "minutes": 10,
+          "concept": "指尖落在品丝靠琴头的一侧，贴近但别压在金属上。",
+          "practice": "在一弦弹 0–1–2–3，再弹 3–2–1–0。每个音占一拍。",
+          "listen": "遇到杂音先挪指尖，再微调力度。右手拨完后停下来听余音。",
+          "goal": "60 BPM 下连弹四轮，每个音都能完整发声。",
+          "bpm": 60,
+          "chords": []
+        },
+        {
+          "id": "tab",
+          "title": "读第一行六线谱",
+          "minutes": 10,
+          "concept": "最上面一条线代表最细的一弦。数字表示品位，0 表示空弦。",
+          "practice": "打开《欢乐颂》，先只看第一小节，逐个确认弦和品。",
+          "listen": "听一遍示范，再把速度降到能边数拍边弹的位置。",
+          "goal": "不用看手指，能按六线谱弹出前两小节。",
+          "bpm": 60,
+          "chords": []
+        },
+        {
+          "id": "finger-walk",
+          "title": "左手四指独立",
+          "minutes": 10,
+          "concept": "一指管一品，四指靠近琴弦。换弦时用指尖感受距离。",
+          "practice": "每根弦依次弹 1–2–3–4，再从细弦返回。两根弦之间别抢拍。",
+          "listen": "先用下拨。稳定以后改成下、上交替。",
+          "goal": "放松地完成两趟，音量基本一致。",
+          "bpm": 56,
+          "chords": []
+        }
+      ]
+    },
+    {
+      "id": "open-chords",
+      "label": "成曲",
+      "title": "和弦、切换与第一首曲子",
+      "description": "用开放和弦把零散的音连成一段伴奏。",
+      "lessons": [
+        {
+          "id": "a-d",
+          "title": "A 与 D 的第一次换位",
+          "minutes": 12,
+          "concept": "先单独检查每根弦的声音，再把和弦作为一个手形移动。",
+          "practice": "A 和弦从五弦扫起，D 从四弦扫起。每个和弦停四拍。",
+          "listen": "数 1、2、3、4，在第四拍尾端松开旧手形。",
+          "goal": "连续切换八次，第一拍都能落稳。",
+          "bpm": 64,
+          "chords": [
+            "A",
+            "D"
+          ]
+        },
+        {
+          "id": "e-am",
+          "title": "大三和弦与小三和弦",
+          "minutes": 12,
+          "concept": "比较 E 和 Em：第三音降低半音，色彩随之改变。",
+          "practice": "拨响 E、Em，再练 E 与 Am 之间整组手指移弦。",
+          "listen": "每个和弦弹两遍，听低音，再听最高音。",
+          "goal": "能说出 E 到 Em 变化的是哪个手指。",
+          "bpm": 66,
+          "chords": [
+            "E",
+            "Em",
+            "Am"
+          ]
+        },
+        {
+          "id": "c-g",
+          "title": "C、G 与低音弦",
+          "minutes": 12,
+          "concept": "C 的根音在五弦三品，G 的根音在六弦三品。",
+          "practice": "弹低音后轻扫其余弦，每两个小节换一次。",
+          "listen": "用 C–G–Am–Em 循环四轮，先看左手，再只用余光。",
+          "goal": "闭眼能用声音分辨 C 和 G。",
+          "bpm": 66,
+          "chords": [
+            "C",
+            "G",
+            "Am",
+            "Em"
+          ]
+        },
+        {
+          "id": "steady-strum",
+          "title": "四拍里的上下扫弦",
+          "minutes": 15,
+          "concept": "手腕做连续钟摆，落下和抬起都保持同样的时间间隔。",
+          "practice": "数 1 和 2 和 3 和 4 和。先每个数字下扫，再加入第 2 和第 4 拍后的上扫。",
+          "listen": "左手轻贴弦做闷音，把右手节奏练匀后再加和弦。",
+          "goal": "不靠示范音也能在 72 BPM 保持八小节。",
+          "bpm": 72,
+          "chords": [
+            "G",
+            "D",
+            "Em",
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finger-rhythm",
+      "label": "律动",
+      "title": "节奏、指弹与横按",
+      "description": "让右手保持时间感，让左手在拍点前准备。",
+      "lessons": [
+        {
+          "id": "arpeggio",
+          "title": "让和弦逐个发声",
+          "minutes": 12,
+          "concept": "拇指负责低音，食指、中指、无名指依次负责三、二、一弦。",
+          "practice": "按 Am 与 C，练 5–3–2–1–2–3，作为一小节的六个八分音符。",
+          "listen": "拨完后让每根弦继续响，避免下一根弦碰到正在响的弦。",
+          "goal": "用相近的音量完成四轮分解。",
+          "bpm": 62,
+          "chords": [
+            "Am",
+            "C"
+          ]
+        },
+        {
+          "id": "six-eight",
+          "title": "在 6/8 里摇摆",
+          "minutes": 12,
+          "concept": "一小节有六个八分音符，重音在第 1 和第 4 个。",
+          "practice": "用节拍器设 6 拍，打开第 4 拍次重音。先拍手，再做分解和弦。",
+          "listen": "口数「一二三、四五六」，第 1 拍稍重，第 4 拍轻一些。",
+          "goal": "不看灯也能感到两个大拍的位置。",
+          "bpm": 108,
+          "chords": [
+            "C",
+            "Am"
+          ]
+        },
+        {
+          "id": "barre",
+          "title": "从小横按到完整 F",
+          "minutes": 15,
+          "concept": "食指稍转向拇指侧，用较硬的侧面按弦。拇指在琴颈背面提供支撑。",
+          "practice": "先按一品最细两根弦，再尝试四弦起扫的 F。",
+          "listen": "完整 F 按好后逐根拨弦，找出漏响的那一根并调整。",
+          "goal": "F 发声后能放松手掌，换回 C 时动作平稳。",
+          "bpm": 56,
+          "chords": [
+            "F",
+            "C"
+          ]
+        },
+        {
+          "id": "palm-mute",
+          "title": "闷音与力度",
+          "minutes": 12,
+          "concept": "右手掌根轻放琴桥前，慢慢移动，听出清音和闷音之间的变化。",
+          "practice": "弹低音 E：每小节前两拍闷音，后两拍打开。",
+          "listen": "在不提速的前提下，让每小节的第一拍最清楚。",
+          "goal": "能稳定控制两种音色及三档力度。",
+          "bpm": 76,
+          "chords": [
+            "E"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "theory",
+      "label": "远行",
+      "title": "乐理、听辨与即兴",
+      "description": "从指板上的音程出发，理解你正在弹什么。",
+      "lessons": [
+        {
+          "id": "intervals",
+          "title": "把音程看成品位距离",
+          "minutes": 12,
+          "concept": "同一根弦上，一品是半音，两品是全音。",
+          "practice": "在五弦上弹 3、5、7、8、10、12、14、15 品，听 C 大调从主音回到主音。",
+          "listen": "比较 C 到 E 的四个半音与 C 到 E♭ 的三个半音。",
+          "goal": "能用全全半全全全半推导任意根音的大调。",
+          "bpm": 60,
+          "chords": []
+        },
+        {
+          "id": "harmony",
+          "title": "I、IV、V 与 vi",
+          "minutes": 15,
+          "concept": "大调音阶上每隔一个音叠三音。C 大调中的 I、IV、V、vi 是 C、F、G、Am。",
+          "practice": "每个和弦弹四拍，先练 C–F–G–C，再练 C–G–Am–F。",
+          "listen": "分别在 G 和 C 处停住，比较两种结束感。",
+          "goal": "能推导 G 大调的 I、IV、V、vi。",
+          "bpm": 68,
+          "chords": [
+            "C",
+            "F",
+            "G",
+            "Am"
+          ]
+        },
+        {
+          "id": "pentatonic",
+          "title": "A 小调五声音阶",
+          "minutes": 15,
+          "concept": "五声音阶含 A、C、D、E、G，先从低把位的简单短句开始。",
+          "practice": "从六弦到一弦，品位依次是 5–8、5–7、5–7、5–7、5–8、5–8。",
+          "listen": "随节拍弹两拍，留两拍安静。每轮换一个结束音，再回到 A。",
+          "goal": "能用三到五个音弹出带停顿的问答。",
+          "bpm": 72,
+          "chords": []
+        },
+        {
+          "id": "blues",
+          "title": "十二小节蓝调",
+          "minutes": 18,
+          "concept": "十二小节分为三个四小节乐句。A 调可使用 A7、D7、E7。",
+          "practice": "练 A7×4、D7×2、A7×2、E7、D7、A7、E7，每小节四拍。",
+          "listen": "先用四分音符伴奏，再试两小节伴奏接两小节即兴。",
+          "goal": "不看谱也能准确进入第九小节的 E7。",
+          "bpm": 84,
+          "chords": [
+            "A7",
+            "D7",
+            "E7"
+          ]
+        }
+      ]
+    }
+  ],
+  "chords": {
+    "A": [
+      -1,
+      0,
+      2,
+      2,
+      2,
+      0
+    ],
+    "D": [
+      -1,
+      -1,
+      0,
+      2,
+      3,
+      2
+    ],
+    "E": [
+      0,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "Em": [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "Am": [
+      -1,
+      0,
+      2,
+      2,
+      1,
+      0
+    ],
+    "C": [
+      -1,
+      3,
+      2,
+      0,
+      1,
+      0
+    ],
+    "G": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      3
+    ],
+    "F": [
+      1,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "A7": [
+      -1,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    "D7": [
+      -1,
+      -1,
+      0,
+      2,
+      1,
+      2
+    ],
+    "E7": [
+      0,
+      2,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "scores": [
+    {
+      "id": "twinkle",
+      "title": "小星星",
+      "credit": "法国传统曲调",
+      "level": "入门",
+      "bpm": 76,
+      "meter": 4,
+      "tip": "每个长音数满两拍。换到一弦五品时，让拇指跟着手掌移动。",
+      "bars": [
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ]
+      ]
+    },
+    {
+      "id": "ode",
+      "title": "欢乐颂",
+      "credit": "贝多芬，第九交响曲主题",
+      "level": "入门",
+      "bpm": 80,
+      "meter": 4,
+      "tip": "先找到一弦空弦和一品的距离。第三段遇到短音时，用口数「三和」。",
+      "bars": [
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1.5
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 0.5
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1.5
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1.5
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ]
+      ]
+    },
+    {
+      "id": "frere",
+      "title": "两只老虎",
+      "credit": "法国传统轮唱曲 Frère Jacques",
+      "level": "入门",
+      "bpm": 84,
+      "meter": 4,
+      "tip": "最后两个小节跨到三弦。提前找到三弦空弦的位置，再一口气弹完。",
+      "bars": [
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 0.5
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 2
+          }
+        ]
+      ]
+    },
+    {
+      "id": "mary",
+      "title": "玛丽有只小羊羔",
+      "credit": "传统儿歌",
+      "level": "入门",
+      "bpm": 76,
+      "meter": 4,
+      "tip": "用最少的手指动作切换 C、D 和 E，让四分音符等长。",
+      "bars": [
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 2
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 4
+          }
+        ]
+      ]
+    },
+    {
+      "id": "rain",
+      "title": "檐下听雨",
+      "credit": "弦迹原创练习",
+      "level": "进阶",
+      "bpm": 64,
+      "meter": 4,
+      "tip": "把第一拍低音弹得稍重。练熟后将每组四音改成力度渐弱。",
+      "bars": [
+        [
+          {
+            "string": 3,
+            "fret": 2,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 3,
+            "fret": 2,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 0,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 3,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 0,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "beats": 1
+          },
+          {
+            "string": 1,
+            "fret": 1,
+            "beats": 1
+          }
+        ],
+        [
+          {
+            "string": 2,
+            "fret": 1,
+            "beats": 4
+          }
+        ]
+      ]
+    }
+  ]
+}

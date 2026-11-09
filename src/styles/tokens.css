@@ -1,0 +1,28 @@
+@layer tokens {
+  :root {
+    color-scheme: light;
+    --bg: #edf0e8; --paper: #f8f9f2; --ink: #202e2a; --muted: #51635a;
+    --line: #ccd7ca; --soft: #e3eade; --accent: #275a4d; --on-accent: #fff;
+    --hero: #153b37; --hero-end: #345d4f; --gold: #f1cf91;
+    --display: "Songti SC", "Noto Serif SC", "STSong", "SimSun", serif;
+    --body: "PingFang SC", "Microsoft YaHei UI", system-ui, sans-serif;
+    --mono: "Cascadia Mono", ui-monospace, monospace;
+    --radius: 20px;
+  }
+  [data-palette="blue"] { --bg: #edf1f7; --paper: #f8fafc; --ink: #202f47; --muted: #4e617e; --line: #ced8e7; --soft: #e3eaf5; --accent: #315782; --hero: #253e61; --hero-end: #485d80; --gold: #e7ddbd; }
+  [data-palette="plum"] { --bg: #f2edf0; --paper: #fcf8fa; --ink: #392a36; --muted: #6b5365; --line: #ddcfd9; --soft: #eee2eb; --accent: #75486b; --hero: #53394f; --hero-end: #74546d; --gold: #eed4a6; }
+  [data-mode="dark"] {
+    color-scheme: dark;
+    --bg: color-mix(in srgb, #101516 86%, var(--hero)); --paper: color-mix(in srgb, #1c2325 85%, var(--hero));
+    --ink: #eef2ed; --muted: #b1c1bd; --line: #415452; --soft: color-mix(in srgb, #293634 76%, var(--hero));
+    --accent: color-mix(in srgb, var(--gold), #fff 22%); --on-accent: #222622;
+  }
+  @media (prefers-color-scheme: dark) {
+    [data-mode="auto"] {
+      color-scheme: dark;
+      --bg: color-mix(in srgb, #101516 86%, var(--hero)); --paper: color-mix(in srgb, #1c2325 85%, var(--hero));
+      --ink: #eef2ed; --muted: #b1c1bd; --line: #415452; --soft: color-mix(in srgb, #293634 76%, var(--hero));
+      --accent: color-mix(in srgb, var(--gold), #fff 22%); --on-accent: #222622;
+    }
+  }
+}

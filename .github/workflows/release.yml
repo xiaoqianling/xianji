@@ -1,0 +1,111 @@
+name: Release
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run package:win
+      - uses: actions/upload-artifact@v6
+        with:
+          name: windows
+          path: release/Xianji-*.exe
+          if-no-files-found: error
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: npm ci
+        env:
+          ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+      - run: npm run build && npx cap sync android
+      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Build Android APK
+        run: cd android && ./gradlew assembleRelease --no-daemon
+      - name: Sign and verify APK
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64" && test -n "$ANDROID_KEYSTORE_PASSWORD"
+          keystore="$RUNNER_TEMP/xianji.p12"
+          trap 'rm -f "$keystore"' EXIT
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 -d > "$keystore"
+          chmod 600 "$keystore"
+          version="$(node -p "require('./package.json').version")"
+          sdk="$ANDROID_HOME/build-tools/36.0.0"
+          mkdir -p release
+          "$sdk/zipalign" -P 16 -f 4 android/app/build/outputs/apk/release/app-release-unsigned.apk "$RUNNER_TEMP/aligned.apk"
+          "$sdk/apksigner" sign --ks "$keystore" --ks-key-alias xianji --ks-pass env:ANDROID_KEYSTORE_PASSWORD --out "release/Xianji-$version-android.apk" "$RUNNER_TEMP/aligned.apk"
+          "$sdk/apksigner" verify --verbose "release/Xianji-$version-android.apk"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: android
+          path: release/Xianji-*-android.apk
+          if-no-files-found: error
+  ios:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        env:
+          ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+      - run: npm run build && npx cap sync ios
+      - name: Build for iOS Simulator
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -derivedDataPath "$RUNNER_TEMP/xianji-ios" CODE_SIGNING_ALLOWED=NO build
+          mkdir -p release
+          version="$(node -p "require('./package.json').version")"
+          ditto -c -k --keepParent "$RUNNER_TEMP/xianji-ios/Build/Products/Release-iphonesimulator/App.app" "release/Xianji-$version-ios-simulator.zip"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: ios
+          path: release/Xianji-*-ios-simulator.zip
+          if-no-files-found: error
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [windows, android, ios]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v7
+        with:
+          path: release
+          merge-multiple: true
+      - name: Check tag and publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$GITHUB_REF_NAME" = "v$(node -p "require('./package.json').version")"
+          (cd release && sha256sum Xianji-* > SHA256SUMS.txt)
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" release/* --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" release/* --verify-tag --title "弦迹 $GITHUB_REF_NAME" --notes-file docs/release-notes.md
+          fi

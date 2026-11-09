@@ -1,0 +1,15 @@
+appId: app.xianji.guitar
+productName: 弦迹
+artifactName: Xianji-${version}-${arch}.${ext}
+directories:
+  output: release
+files:
+  - dist/**
+  - desktop/**
+  - package.json
+win:
+  icon: public/icon.png
+  target: nsis
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true

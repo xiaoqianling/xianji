@@ -1,0 +1,19 @@
+@layer base {
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.65 var(--body); color: var(--ink); background: var(--bg); min-width: 320px; }
+  h1, h2, p { margin: 0; }
+  h1, h2 { line-height: 1.24; }
+  h1 { font: 700 clamp(2.15rem, 5vw, 4.4rem)/1.12 var(--display); letter-spacing: -.055em; text-wrap: balance; }
+  h2 { font: 700 1.35rem/1.25 var(--display); }
+  p { color: var(--muted); }
+  a { color: inherit; text-decoration: none; }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  button:disabled { cursor: default; opacity: .64; }
+  button, a, input, select { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  select, input:not([type="range"], [type="checkbox"]) { padding: .58rem .72rem; border-radius: 10px; border: 1px solid var(--line); background: var(--paper); min-width: 0; }
+  input[type="range"], input[type="checkbox"] { accent-color: var(--accent); }
+  small, .muted { color: var(--muted); }
+  svg { flex-shrink: 0; vertical-align: middle; }
+}
