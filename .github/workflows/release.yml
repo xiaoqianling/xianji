@@ -40,7 +40,7 @@ jobs:
       - run: npm run build && npx cap sync android
       - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
       - name: Build Android APK
-        run: cd android && ./gradlew assembleRelease --no-daemon
+        run: cd android && bash ./gradlew assembleRelease --no-daemon
       - name: Sign and verify APK
         shell: bash
         env:
