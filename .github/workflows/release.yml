@@ -17,7 +17,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run package:win
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: windows
           path: release/Xianji-*.exe
@@ -58,7 +58,7 @@ jobs:
           "$sdk/zipalign" -P 16 -f 4 android/app/build/outputs/apk/release/app-release-unsigned.apk "$RUNNER_TEMP/aligned.apk"
           "$sdk/apksigner" sign --ks "$keystore" --ks-key-alias xianji --ks-pass env:ANDROID_KEYSTORE_PASSWORD --out "release/Xianji-$version-android.apk" "$RUNNER_TEMP/aligned.apk"
           "$sdk/apksigner" verify --verbose "release/Xianji-$version-android.apk"
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: android
           path: release/Xianji-*-android.apk
@@ -81,7 +81,7 @@ jobs:
           mkdir -p release
           version="$(node -p "require('./package.json').version")"
           ditto -c -k --keepParent "$RUNNER_TEMP/xianji-ios/Build/Products/Release-iphonesimulator/App.app" "release/Xianji-$version-ios-simulator.zip"
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: ios
           path: release/Xianji-*-ios-simulator.zip
