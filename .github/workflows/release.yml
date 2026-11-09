@@ -23,7 +23,7 @@ jobs:
           path: release/Xianji-*.exe
           if-no-files-found: error
   android:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
@@ -38,7 +38,11 @@ jobs:
         env:
           ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
       - run: npm run build && npx cap sync android
-      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Check Android SDK packages
+        run: |
+          if [ ! -f "$ANDROID_HOME/platforms/android-36/android.jar" ] || [ ! -x "$ANDROID_HOME/build-tools/36.0.0/apksigner" ]; then
+            "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --sdk_root="$ANDROID_HOME" 'platforms;android-36' 'build-tools;36.0.0'
+          fi
       - name: Build Android APK
         run: cd android && bash ./gradlew assembleRelease --no-daemon
       - name: Sign and verify APK
